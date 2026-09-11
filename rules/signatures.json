@@ -1,0 +1,61 @@
+[
+  {
+    "id": "sig-001",
+    "name": "SYN Flood / DoS Rule",
+    "category": "SYN Flood",
+    "protocol": "TCP",
+    "destination_port": 80,
+    "threshold": 500,
+    "time_window_sec": 1,
+    "enabled": true,
+    "severity": "High",
+    "description": "Triggers when TCP packet rate to port 80 exceeds 500 packets/second from a single source."
+  },
+  {
+    "id": "sig-002",
+    "name": "Port Scan Rule",
+    "category": "Port Scan",
+    "protocol": "TCP",
+    "threshold": 100,
+    "time_window_sec": 10,
+    "enabled": true,
+    "severity": "Medium",
+    "description": "Triggers when a single source IP contacts more than 100 unique destination ports within 10 seconds."
+  },
+  {
+    "id": "sig-003",
+    "name": "SSH Brute Force Rule",
+    "category": "Brute Force",
+    "protocol": "SSH",
+    "destination_port": 22,
+    "threshold": 10,
+    "time_window_sec": 60,
+    "enabled": true,
+    "severity": "High",
+    "description": "Triggers when repeated connection/login attempts exceed 10 failures within 60 seconds."
+  },
+  {
+    "id": "sig-004",
+    "name": "Web Attack - SQL Injection",
+    "category": "Web Attack",
+    "protocol": "HTTP",
+    "destination_port": 80,
+    "threshold": 1,
+    "time_window_sec": 1,
+    "enabled": true,
+    "severity": "Critical",
+    "description": "Triggers on detection of SQL injection payload signatures (UNION SELECT, OR 1=1) in web requests."
+  },
+  {
+    "id": "sig-005",
+    "name": "DDoS Volumetric Anomaly",
+    "category": "SYN Flood",
+    "protocol": "UDP",
+    "destination_port": 53,
+    "threshold": 1000,
+    "time_window_sec": 1,
+    "enabled": true,
+    "severity": "Critical",
+    "description": "Triggers when incoming DNS flood or UDP reflection volume exceeds 1000 packets/second."
+  }
+]

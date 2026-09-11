@@ -1,0 +1,6 @@
+{
+  "name": "Campus NIDS",
+  "description": "Network Intrusion Detection System for University Campus Network with Signature Engine, Machine Learning, Traffic Simulation, and SOC Dashboard",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
